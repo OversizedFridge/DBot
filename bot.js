@@ -45,7 +45,7 @@ bot.on('message', async (msg) => {
     }
   }
   if(command === 'react-pog') {
-    msg.react('396548322053062656');
+    msg.react('😄');
   }
   
   if(command === 'joke') {
