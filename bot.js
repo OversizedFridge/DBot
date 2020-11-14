@@ -45,10 +45,15 @@ bot.on('message', async (msg) => {
       msg.reply('no')
     }
   }
-  if(command === 'react-pog') {
-    msg.react(':pog:');
-  }
+  //if(command === 'react-pog') {
+   // msg.react(':pog:');
+ // }
   
+  if (msg.content === '!react-pog') {
+	const reactionEmoji = msg.guild.emojis.cache.find(emoji => emoji.name === 'pog');
+	msg.react(:pog:);
+  
+  }
   if(command === 'joke') {
       let getJoke = async () => {
         let result = await fetch('https://official-joke-api.appspot.com/random_joke')
