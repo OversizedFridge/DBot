@@ -45,7 +45,7 @@ bot.on('message', async (msg) => {
     }
   }
   if(command === 'react-pog') {
-    msg.react('28576beb596a5a49207912a086f1ff34');
+    msg.react('396548322053062656');
   }
   
   if(command === 'joke') {
