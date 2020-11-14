@@ -64,7 +64,16 @@ bot.on('message', async (msg) => {
       return
   }
 
+  if(command === 'help') {
+    msg.reply(`Commands:
+                !yesno: ask a yes or no question and I will reply with yes or no.
+                !ok: ok
+                !joke: gets a random joke off of the internet
+                bad bot: dont say this as it saddens me
+                good bot: :)`)
 
+  }                  
+              
   if(command === 'ok') {
       msg.reply('ok')
   }
