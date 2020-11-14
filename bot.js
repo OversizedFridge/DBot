@@ -44,7 +44,10 @@ bot.on('message', async (msg) => {
       msg.reply('no')
     }
   }
-
+  if(command === 'pog') {
+    msg.react(':28576beb596a5a49207912a086f1ff34:')
+  }
+  
   if(command === 'joke') {
       let getJoke = async () => {
         let result = await fetch('https://official-joke-api.appspot.com/random_joke')
