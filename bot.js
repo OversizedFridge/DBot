@@ -51,15 +51,8 @@ bot.on('message', async (msg) => {
   
   if (command === 'react-pog') {
 	console.log('pogging')
-	console.log(msg.guild.emojis.cache)
 	const reactionEmoji = msg.guild.emojis.cache.find(emoji => emoji.name === 'pog');
-	console.log(reactionEmoji);
 	 msg.react(reactionEmoji);
-  	const reactionEmoji2 = msg.guild.emojis.cache.find(emoji => emoji.name === ':pog:');
-	console.log(reactionEmoji2)
-	concole.log(client.emojis.cache.get('pog'))
-	concole.log(client.emojis.cache.get(':pog:'))  
-	concole.log(client.emojis.cache)
   }
   if(command === 'joke') {
       let getJoke = async () => {
