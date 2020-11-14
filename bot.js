@@ -51,7 +51,7 @@ bot.on('message', async (msg) => {
   
   if (msg.content === '!react-pog') {
 	const reactionEmoji = msg.guild.emojis.cache.find(emoji => emoji.name === 'pog');
-	msg.react(:pog:);
+	msg.react(reactionEmoji);
   
   }
   if(command === 'joke') {
