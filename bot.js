@@ -49,10 +49,14 @@ bot.on('message', async (msg) => {
    // msg.react(':pog:');
  // }
   
-  if (msg.content === '!react-pog') {
+  if (msg.content === 'react-pog') {
+	console.log(msg.guild.emojis.cache)
 	const reactionEmoji = msg.guild.emojis.cache.find(emoji => emoji.name === 'pog');
-	msg.react(reactionEmoji);
-  
+	console.log(reactionEmoji);
+	 msg.react(reactionEmoji);
+  	const reactionEmoji2 = msg.guild.emojis.cache.find(emoji => emoji.name === ':pog:');
+	console.log(reactionEmoji2)
+	  
   }
   if(command === 'joke') {
       let getJoke = async () => {
