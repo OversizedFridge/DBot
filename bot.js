@@ -55,6 +55,12 @@ bot.on('message', async (msg) => {
 	 msg.react(reactionEmoji);
   }
 	
+  if (command === 'soviet') {
+	console.log('union')
+	const reactionEmoji = msg.guild.emojis.cache.find(emoji => emoji.name === 'soviet');
+	 msg.react(reactionEmoji);
+  }
+	
   if (command === 'omba') {
 	console.log('ombing')
 	const reactionEmoji = msg.guild.emojis.cache.find(emoji => emoji.name === 'omba');
