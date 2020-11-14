@@ -49,11 +49,18 @@ bot.on('message', async (msg) => {
    // msg.react(':pog:');
  // }
   
-  if (command === 'react-pog') {
+  if (command === 'pog') {
 	console.log('pogging')
 	const reactionEmoji = msg.guild.emojis.cache.find(emoji => emoji.name === 'pog');
 	 msg.react(reactionEmoji);
   }
+	
+  if (command === 'omba') {
+	console.log('ombing')
+	const reactionEmoji = msg.guild.emojis.cache.find(emoji => emoji.name === 'omba');
+	 msg.react(reactionEmoji);
+  }
+	
   if(command === 'joke') {
       let getJoke = async () => {
         let result = await fetch('https://official-joke-api.appspot.com/random_joke')
