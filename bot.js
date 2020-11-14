@@ -44,8 +44,8 @@ bot.on('message', async (msg) => {
       msg.reply('no')
     }
   }
-  if(command === 'react-pog') {
-    msg.react(':pog:');
+  if(command === 'react-custom') {
+    msg.react('28576beb596a5a49207912a086f1ff34');
   }
   
   if(command === 'joke') {
