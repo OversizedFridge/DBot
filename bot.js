@@ -3,7 +3,7 @@ const Discord = require('discord.js')
 const fetch = require ('node-fetch')
 
 const bot = new Discord.Client()
-const token = 'Nzc1MDc1OTM3Nzc5MDU2NjUw.X6hDtw.jq-ju4rE8dAKbTVqpxRJY_Y2JMM'
+const token = process.env.BOT_TOKEN
 bot.on('ready',() => {
   console.log('Bot online')
 })
