@@ -44,12 +44,10 @@ bot.on('message', async (msg) => {
     } else {
       msg.reply('no')
     }
+    return
   }
-  //if(command === 'react-pog') {
-   // msg.react(':pog:');
- // }
   
-  if (command === 'pog') {
+ /* if (command === 'pog') {
 	console.log('pogging')
 	const reactionEmoji = msg.guild.emojis.cache.find(emoji => emoji.name === 'pog');
 	 msg.react(reactionEmoji);
@@ -65,7 +63,7 @@ bot.on('message', async (msg) => {
 	console.log('ombing')
 	const reactionEmoji = msg.guild.emojis.cache.find(emoji => emoji.name === 'omba');
 	 msg.react(reactionEmoji);
-  }
+  }*/
 	
   if(command === 'joke') {
       let getJoke = async () => {
@@ -74,10 +72,11 @@ bot.on('message', async (msg) => {
         return json
       }
 
+      
       let joke = await getJoke()
 
       msg.reply(`
-      Here's your joke
+      Here's your joke:
       
       ${joke.setup}
       
@@ -88,16 +87,18 @@ bot.on('message', async (msg) => {
 
   if(command === 'help') {
     msg.reply(`Commands:
-                !yesno: ask a yes or no question and I will reply with yes or no.
-                !ok: ok
-                !joke: gets a random joke off of the internet
-                bad bot: dont say this as it saddens me
-                good bot: :)`)
-
+    !yesno: ask a yes or no question and I will reply with yes or no.
+    !ok: ok
+    !joke: gets a random joke off of the internet
+    bad bot: dont say this as it saddens me
+    good bot: :)
+    say any emoji/custom emoji name (ex. !pog) and i will react to your message with it.`)
+    return
   }                  
               
   if(command === 'ok') {
       msg.reply('ok')
+      return
   }
 
   if (command === "clear") {
@@ -121,6 +122,16 @@ bot.on('message', async (msg) => {
     }
     //const messageList = msg.channel.message.fetch({limit: 100})
     //console.log(msg.channel.message)
+    return
   }
+	
+	console.log('emoji search started:' + command)
+	const reactionEmoji = msg.guild.emojis.cache.find(emoji => emoji.name === command);
+	if(reactEmoji != null){
+	    console.log('emoji ready')
+	    msg.react(reactionEmoji);
+	}
+  }
+
 })
 bot.login(token)
