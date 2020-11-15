@@ -131,7 +131,6 @@ bot.on('message', async (msg) => {
 	    console.log('emoji ready')
 	    msg.react(reactionEmoji);
 	}
-  }
 
 })
 bot.login(token)
