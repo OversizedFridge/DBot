@@ -127,7 +127,7 @@ bot.on('message', async (msg) => {
 	
 	console.log('emoji search started:' + command)
 	const reactionEmoji = msg.guild.emojis.cache.find(emoji => emoji.name === command);
-	if(reactEmoji != null){
+	if(reactionEmoji != null){
 	    console.log('emoji ready')
 	    msg.react(reactionEmoji);
 	}
