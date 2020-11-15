@@ -6,13 +6,7 @@ const bot = new Discord.Client()
 const token = process.env.BOT_TOKEN
 bot.on('ready',() => {
   console.log('Bot online')
-  bot.user.setPresence({
-        status: "online",  // You can show online, idle... Do not disturb is dnd
-        game: {
-            name: "around the house eating dust",  // The message shown
-            type: "PLAYING" // PLAYING, WATCHING, LISTENING, STREAMING,
-        }
-    });
+  
 })
 
 const prefix = '!'
